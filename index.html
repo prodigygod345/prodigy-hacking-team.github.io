@@ -1,20 +1,44 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Prodigy Hacking Control Center</title>
-<link rel="shortcut icon" href="ico/p.ico" type="image/x-icon">
-</head>
-<body>
-<script>
-function Disable(btnId) {
-    document.getElementById(btnId).disabled = 'true';
-}
-</script>
-<button id="0" onclick="alert('All functions activated!');Disable(0);Disable(1);Disable(2);Disable(3);Disable(4);Disable(5);coin.value;">Activate all</button>
-<br />
-<button id="1" onclick="alert('Your now a [fake] member!');Disable(1);">Add Member status</button><br>
-<button id="2" onclick="Disable(2);coin.value;">Add coins</button><br>
-<button id="3" onclick="alert('A random item has been added to your inventory!');Disable(3);">Get random item</button><br>
-<button id="4" onclick="alert('You wont have to do math anymore!');Disable(4);">Remove math (your attacks may miss)</button><br>
-<button id="5" onclick="alert('You now have infinite health');Disable(5);">Infinite health</button><br>
-</body>
+PIXI.game.prodigy.player.backpack.data.outfit.push({"N":999999,"ID":52});
+PIXI.game.prodigy.player.backpack.data.hat.push({"N":999999,"ID":61});
+PIXI.game.prodigy.player.backpack.data.weapon.push({"N":1,"ID":77});
+//Max Member stars
+javascript:PIXI.game.prodigy.player.data.storedMemberStars=99999999999999//99 Conjure cubes
+ PIXI.game.prodigy.debugMisc.getCubes(99)
+ //Sets the amount of all your currencies to 9 million. (you can change number)
+x = PIXI.game.prodigy.player.backpack.data.currency
+for (i in x) {
+x[i] = {"ID": x[i].ID, "N": 9000000}
+}//All outfits
+PIXI.game.prodigy.player.backpack.data.outfit=[]
+x = PIXI.game.state.states.Boot._gameData.outfit
+for (i in x) {
+PIXI.game.prodigy.player.backpack.data.outfit[i] = {"ID": x[i].ID, "N": 1}}//All boots
+PIXI.game.prodigy.player.backpack.data.boots=[]
+x = PIXI.game.state.states.Boot._gameData.boots
+for (i in x) {PIXI.game.prodigy.player.backpack.data.boots[i] = {"ID": x[i].ID, "N": 1}}//All hats
+PIXI.game.prodigy.player.backpack.data.hat=[]
+x = PIXI.game.state.states.Boot._gameData.hat
+for (i in x) {
+PIXI.game.prodigy.player.backpack.data.hat[i] = {"ID": x[i].ID, "N": 1}}//Trails Master set
+function TrialmastersGear() {
+PIXI.game.prodigy.player.backpack.data.hat.push({"N":999999,"ID":23});
+PIXI.game.prodigy.player.backpack.data.outfit.push({"N":999999,"ID":24});
+PIXI.game.prodigy.player.backpack.data.boots.push({"N":999999,"ID":18});
+PIXI.game.prodigy.player.backpack.data.weapon.push({"N":1,"ID":47});}TrialmastersGear();
+//W124RD_Nickname
+function W124RD_Nickname() {
+PIXI.game.prodigy.player.appearance._name.nickname=7;}W124RD_Nickname();
+//Free membership
+function membership() {
+PIXI.game.prodigy.player.tt=true;}membership();
+//Level 100,000,000
+function level100,000,000() {
+PIXI.game.prodigy.player.data.level=100,000,000;}
+level100,000,000();
+PIXI.game.prodigy.titansNetworkHandler.hitTitan(Infinity)
+PIXI.game.prodigy.debugQuests.completeTutorial()
+PIXI.game.prodigy.player.addStars()
+PIXI.game.prodigy.debugMisc.tpTowerFloor(100) 
+PIXI.game.prodigy.player.modifiers.damage=10000000; // 10000000x Damage
+PIXI.game.prodigy.player.modifiers.maxHearts=100000000; // 100000000x HP
+PIXI.game.prodigy.player.heal(9999999999999999999999999999999999999999999999)
